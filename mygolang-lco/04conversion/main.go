@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"bufio"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main()  {
@@ -12,13 +14,15 @@ func main()  {
 
 	reader := bufio.NewReader(os.Stdin)
 
-	input, err := reader.ReadString('\n')
+	input, _ := reader.ReadString('\n')
+
+	numRating, err := strconv.ParseFloat(strings.TrimSpace(input), 64)
 
 	if(err != nil){
 		fmt.Println("Error occurred while processing")
 	} else {
 		fmt.Println("Rating given")
-		//input := input + 1
-		fmt.Println(input)
+		numRating := numRating + 1
+		fmt.Println(numRating)
 	}
 }
