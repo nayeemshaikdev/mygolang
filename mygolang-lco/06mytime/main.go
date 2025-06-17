@@ -18,4 +18,4 @@ func main()  {
 
 	fmt.Println("Aydin Birthday : ", createdDate)
 	fmt.Println("Aydin Birthday : ", createdDate.Format("01-02-2006 Monday"))
-}
+}o
